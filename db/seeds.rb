@@ -6,9 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# 15.times do
-#     courses = Course.create!(name: Faker::ProgrammingLanguage.name, description: Faker::RickAndMorty.quote)
-# end
+#Faites un rails db:reset qui permet de tout reset et de relancer des créations de tableaux
+
+15.times do
+    courses = Course.create!(name: Faker::ProgrammingLanguage.name, description: Faker::RickAndMorty.quote)
+end
 
 50.times do
     lessons = Lesson.create!(title: Faker::ElderScrolls.city, body: Faker::StarWars.wookiee_sentence, course_id: Random.new.rand(1..10))
